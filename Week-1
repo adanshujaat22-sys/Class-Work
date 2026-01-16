@@ -1,0 +1,25 @@
+Question 1
+
+public class Main {
+    public static void main(String[] args) {
+        int age = 20;
+        double gpa = 3.5;
+        char grade = 'B';
+        boolean passed = true;
+        String name = "Adan";
+
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("GPA: " + gpa);
+        System.out.println("Grade: " + grade);
+        System.out.println("Passed: " + passed);
+    }
+}
+
+Output
+
+Name: Adan
+Age: 20
+GPA: 3.5
+Grade: B
+Passed: true
