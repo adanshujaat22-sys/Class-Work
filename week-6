@@ -149,3 +149,47 @@ Before:
 
 After deleting 20:
 [10] ⇄ [30]
+
+Question 2
+
+ // Delete a node by value
+    public void deleteByValue(int value) {
+        if (head == null) {
+            System.out.println("List is empty.");
+            return;
+        }
+
+        Node temp = head;
+
+        // Case 1: delete head
+        if (temp.data == value) {
+            head = head.next;
+            if (head != null) head.prev = null;
+            System.out.println(value + " deleted.");
+            return;
+        }
+
+        // Traverse to find node
+        while (temp != null && temp.data != value) {
+            temp = temp.next;
+        }
+
+        if (temp == null) {
+            System.out.println("Value not found.");
+            return;
+        }
+
+        
+        // Update tail if last node is being deleted
+        if (temp.next == null) {
+            tail = temp.prev;
+        }
+
+
+        // Update links
+        if (temp.next != null) temp.next.prev = temp.prev;
+        if (temp.prev != null) temp.prev.next = temp.next;
+
+        System.out.println(value + " deleted.");
+    }
+
