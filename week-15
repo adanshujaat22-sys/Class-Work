@@ -1,0 +1,28 @@
+Map<Integer, String> map = new HashMap<>();
+
+
+map.put(1, "Adan");
+map.put(2, "Wajahat");
+
+map.get(1);   // returns "Adan"
+
+map.remove(2);
+
+map.containsKey(1); // true or false
+
+map.size();
+map.isEmpty();
+
+for (Integer key : map.keySet()) {
+    System.out.println(key);
+}
+
+for (String value : map.values()) {
+    System.out.println(value);
+}
+
+for (Map.Entry<Integer, String> entry : map.entrySet()) {
+    System.out.println(entry.getKey() + " → " + entry.getValue());
+}
+
+
